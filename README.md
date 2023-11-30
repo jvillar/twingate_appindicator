@@ -23,7 +23,7 @@ Clone or download this repository to your local machine:
 
 Clone or download this repository to your local machine:
    ```sh
-   /opt/twingate_appindicator/twingate_indicator.py
+   /opt/twingate_appindicator/twingate_indicator.py &
    ```
 
 ## Uninstall
