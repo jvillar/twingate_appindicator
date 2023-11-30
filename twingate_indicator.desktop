@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Twingate Indicator
+Type=Application
+Exec=/opt/twingate_appindicator/twingate_indicator.py
+Icon=/opt/twingate_appindicator/twingate-up.svg
+
+

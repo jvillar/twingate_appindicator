@@ -14,11 +14,27 @@ sudo apt-get install gir1.2-ayatanaappindicator3-0.1
 Clone or download this repository to your local machine:
    ```sh
    git clone https://github.com/jvillar/twingate_appindicator.git
+   sudo mkdir -p /opt
+   sudo cp -r twingate_appindicator /opt
+   cp /opt/twingate_appindicator/twingate_indicator.desktop ~/.config/autostart
    ```
 
+## Manual execution
 
+Clone or download this repository to your local machine:
+   ```sh
+   /opt/twingate_appindicator/twingate_indicator.py
+   ```
+
+## Uninstall
+
+Clone or download this repository to your local machine:
+   ```sh
+   rm -rf /opt/twingate_appindicator/
+   rm -f ~/.config/autostart/twingate_indicator.desktop
+   ```
 ##  Autostart
-To have the Twingate app indicator start automatically with GNOME shell, configure it in GNOME's startup applications with the command `twingate_indicator.py` located at the root of the cloned repository.
+To have the Twingate app indicator started automatically with GNOME shell, it is configured in GNOME's startup applications by placing a launcher at  `~/.config/autostart/`
 
 ## Usage
 - **Connect**: Click on the notification area icon and select "Connect".

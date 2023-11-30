@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/python3
+
 import os, sys, gi
 try:
     gi.require_version('AyatanaAppIndicator3', '0.1')
