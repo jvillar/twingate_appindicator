@@ -6,7 +6,7 @@ This repository hosts a Twingate App Indicator Linux systems using Gnome shell. 
 ## Prerequisites
 For Ubuntu 23.10 based systems, please install the following package before installing the App Indicator:
 ```sh
-sudo apt-get install gir1.2-ayatanaappindicator3-0.1
+sudo apt-get install gir1.2-ayatanaappindicator3-0.1 xclip
 ```
 
 ## Installation

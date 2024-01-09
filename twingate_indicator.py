@@ -4,6 +4,7 @@ import os
 import sys
 import gi
 import webbrowser
+import subprocess
 
 try:
     gi.require_version('AyatanaAppIndicator3', '0.1')
@@ -118,9 +119,15 @@ class TwingateIndicator:
         webbrowser.open(url)
 
     def copy_to_clipboard(self, text):
-        clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
-        clipboard.set_text(text, -1)
-        clipboard.store()
+        if "WAYLAND_DISPLAY" in os.environ:
+            process = subprocess.Popen(['xclip', '-selection', 'c'], 
+                                   stdin=subprocess.PIPE, close_fds=True)
+            process.communicate(input=text.encode('utf-8'))
+        else:
+            # The following doesnt work in wayland
+            clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
+            clipboard.set_text(text, -1)
+            clipboard.store()
 
     def main(self):
         GLib.timeout_add_seconds(0.5, self.update_twingate_status)
